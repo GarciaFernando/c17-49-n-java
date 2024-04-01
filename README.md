@@ -33,15 +33,14 @@ Asegúrate de instalar todas las dependencias antes de ejecutar los comandos ant
 ¡Aquí van algunas capturas de pantalla de la aplicación en acción! (Agrega las imágenes aquí)
 
 ## Colaboradores del Proyecto 🙍‍♂️
-
 - Anderson Jiménez
 - Andrés Orozco
-- Anthony
+- Anthony Medina García
 - Esteban
 - Franco Quijada
 - Marcos Aguilar
-- Will
-- Christian
+- Wilder chambi
+- Christian Pérez
 - Fernando Garcia
 - Nicolas Sole
 - Alexis Jardin
