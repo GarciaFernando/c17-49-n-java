@@ -32,11 +32,11 @@ Asegúrate de instalar todas las dependencias antes de ejecutar los comandos ant
 
 ¡Aquí van algunas capturas de pantalla de la aplicación en acción! (Agrega las imágenes aquí)
 
-## Colaboradores del Proyecto 🙍‍♂️
+## Integrantes del Equipo 🙍‍♂️
 - Anderson Jiménez
 - Andrés Orozco
 - Anthony Medina García
-- Esteban
+- Esteban Camacho Salgado
 - Franco Quijada
 - Marcos Aguilar
 - Wilder chambi
