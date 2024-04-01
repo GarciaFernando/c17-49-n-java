@@ -33,16 +33,21 @@ Asegúrate de instalar todas las dependencias antes de ejecutar los comandos ant
 ¡Aquí van algunas capturas de pantalla de la aplicación en acción! (Agrega las imágenes aquí)
 
 ## Integrantes del Equipo 🙍‍♂️
-- Anderson Jiménez
+### Team Leader:
+- Leonela Denise Dominguez Almada
+### Back-end:
 - Andrés Orozco
 - Anthony Medina García
 - Esteban Camacho Salgado
 - Franco Quijada
 - Marcos Aguilar
-- Wilder chambi
 - Christian Pérez
 - Fernando Garcia
+ ### QA:
 - Nicolas Sole
+ ### Front-End:
+- Anderson Jiménez
+- Wilder chambi
 - Alexis Jardin
 
 ## Tecnologías Utilizadas 🧰
@@ -50,6 +55,7 @@ Asegúrate de instalar todas las dependencias antes de ejecutar los comandos ant
 - Backend: Java con Spring Boot y base de datos MySQL.
   
     ![springboot](https://img.shields.io/badge/-Springboot-FFFFF?style=flat&logo=springboot&logoColor=ffffff)
+    ![Mysql](https://img.shields.io/badge/-Mysql-5DC1C6?style=flat&logo=mysql&logoColor=ffffff)
   
 - Frontend: Next.js y Tailwind CSS.
 
