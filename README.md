@@ -50,7 +50,7 @@ Asegúrate de instalar todas las dependencias antes de ejecutar los comandos ant
 - Wilder chambi
 - Alexis Jardin
   
-  [![Contribuidores](https://github.com/No-Country/c17-49-n-java)](https://github.com/No-Country/c17-49-n-java/graphs/contributors)
+  [![Contribuidores](https://contrib.rocks/image?repo=No-Country/c17-49-n-java)](https://github.com/No-Country/c17-49-n-java/graphs/contributors)
 
 ## Tecnologías Utilizadas 🧰
 
