@@ -1,7 +1,7 @@
 # c17-49-n-java
-# Telemedicina App
 
-![Logo de la aplicación](./frontend/public/Medilatam.svg)
+<img src="./frontend/public/Medilatam.svg" alt="Logo de la aplicación" width="500" height="200">
+
 
 ## Descripción 
 La aplicación de telemedicina permite a los pacientes tener consultas médicas mediante video llamadas y otros medios de comunicación, todo desde la comodidad de sus hogares. Los médicos pueden acceder a la historia clínica del paciente durante la consulta, mientras que el personal administrativo del centro médico puede gestionar las reuniones y otras funciones de la aplicación.
@@ -49,6 +49,8 @@ Asegúrate de instalar todas las dependencias antes de ejecutar los comandos ant
 - Anderson Jiménez
 - Wilder chambi
 - Alexis Jardin
+  
+  [![Contribuidores](https://github.com/No-Country/c17-49-n-java)](https://github.com/No-Country/c17-49-n-java/graphs/contributors)
 
 ## Tecnologías Utilizadas 🧰
 
@@ -76,7 +78,7 @@ Aquí tienes una guía rápida:
 7. Abre una [_pull request_](https://github.com/No-Country/c17-49-n-java/pulls)
 
 ## Agradecimientos
-![Logo de No Country](https://assets-global.website-files.com/65773955177041dbf059ed20/6584760759a54bef40894700_Logo%20navbar.svg)
+<img src="https://assets-global.website-files.com/65773955177041dbf059ed20/6584760759a54bef40894700_Logo%20navbar.svg" alt="Logo de la aplicación" width="500" height="200" padding="0">
 Queremos agradecer especialmente a No Country por la oportunidad de participar en la creación de este proyecto.
 
 
