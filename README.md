@@ -1,6 +1,6 @@
 # c17-49-n-java
 
-<img src="./frontend/public/Medilatam.svg" alt="Logo de la aplicación" width="500" height="200">
+<img src="./frontend/public/Medilatam.svg" alt="Logo de la aplicación" width="500" height="200" style="display: block; margin: 0 auto;">
 
 
 ## Descripción 
@@ -49,9 +49,9 @@ Asegúrate de instalar todas las dependencias antes de ejecutar los comandos ant
 - Anderson Jiménez
 - Wilder chambi
 - Alexis Jardin
-  
+---  
   [![Contribuidores](https://contrib.rocks/image?repo=No-Country/c17-49-n-java)](https://github.com/No-Country/c17-49-n-java/graphs/contributors)
-
+---
 ## Tecnologías Utilizadas 🧰
 
 - Backend: Java con Spring Boot y base de datos MySQL.
@@ -78,7 +78,7 @@ Aquí tienes una guía rápida:
 7. Abre una [_pull request_](https://github.com/No-Country/c17-49-n-java/pulls)
 
 ## Agradecimientos
-<img src="https://assets-global.website-files.com/65773955177041dbf059ed20/6584760759a54bef40894700_Logo%20navbar.svg" alt="Logo de la aplicación" width="500" height="200" padding="0">
+<img src="https://assets-global.website-files.com/65773955177041dbf059ed20/6584760759a54bef40894700_Logo%20navbar.svg" alt="Logo de la aplicación" width="500" height="200" style="display: block; margin: 0 auto;">
 Queremos agradecer especialmente a No Country por la oportunidad de participar en la creación de este proyecto.
 
 
