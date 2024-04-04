@@ -1,7 +1,7 @@
 # c17-49-n-java
 # Telemedicina App
 
-![Logo de la aplicación](placeholder_link)
+![Logo de la aplicación](./frontend/public/Medilatam.svg)
 
 ## Descripción 
 La aplicación de telemedicina permite a los pacientes tener consultas médicas mediante video llamadas y otros medios de comunicación, todo desde la comodidad de sus hogares. Los médicos pueden acceder a la historia clínica del paciente durante la consulta, mientras que el personal administrativo del centro médico puede gestionar las reuniones y otras funciones de la aplicación.
