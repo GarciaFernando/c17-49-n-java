@@ -1,0 +1,29 @@
+package com.medilatam.backend.Interface;
+
+import com.medilatam.backend.Entity.Doctor;
+import jakarta.transaction.Transactional;
+import java.util.List;
+import org.springframework.stereotype.Service;
+
+/**
+ *
+ * @author Franklynjsb
+ */
+
+@Service
+@Transactional
+public interface IDoctorService {
+    
+     //Exponer Lista de Doctores
+    public List<Doctor> getDoctor();
+    
+    //Guarda un Objeto que sea Doctor
+    public void saveDoctor (Doctor doctor);
+    
+    //Eliminar un Objeto que sea Doctor
+    public void deleteDoctor (Integer id);
+    
+    //Buscar un Objeto del tipo Doctor por Id
+    public Doctor findDoctor (Integer id);
+    
+}
