@@ -1,13 +1,12 @@
-package com.medilatam.backend.entities;
+package com.medilatam.backend.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
-@Table (name = "persona")
+@Table(name = "persona")
 public class PersonaEntity {
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
