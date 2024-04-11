@@ -7,7 +7,7 @@ export const Navbar = () => {
         <>
             <header>
                 <Image
-                    src='/medilatam.svg'
+                    src='/Medilatam.svg'
                     alt="logo de la aplicación web"
                     height={150}
                     width={500}
