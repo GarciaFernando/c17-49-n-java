@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.borde1 {
+  border: 2px solid #000;
+}
+
+.borde2 {
+  border: 2px solid red;
+}
+
+.borde3 {
+  border: 2px solid blue;
+}
