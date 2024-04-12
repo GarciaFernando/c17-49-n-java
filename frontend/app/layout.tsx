@@ -28,7 +28,7 @@ export default function RootLayout({
           <header className=" ">
             <Navbar />
           </header>
-          <main className="borde2 w-full">{children}</main>
+          <main className="w-full">{children}</main>
         </div>
       </body>
     </html>

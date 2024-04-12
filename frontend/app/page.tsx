@@ -1,4 +1,5 @@
 import { especialidades } from '@/mocks/especialidad.json';
+import { Calendario } from './ui/layout/Calendario';
 
 export default function Home() {
   // console.log(especialidades);
@@ -20,8 +21,8 @@ export default function Home() {
             </h1>
           ))}
         </div>
-        <div className="mt-4 borde2">
-          <h1>CALENDARIO</h1>
+        <div className="mt-4">
+          <Calendario />
         </div>
         <div className="flex flex-col gap-3 mt-4">
           <h1 className="font-bold text-lg text-center">
