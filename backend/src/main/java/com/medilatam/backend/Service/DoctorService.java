@@ -28,12 +28,12 @@ public class DoctorService implements IDoctorService {
     }
 
     @Override
-    public void deleteDoctor(Integer id) {
+    public void deleteDoctor(Long id) {
         idoctorrepository.deleteById(id);
     }
 
     @Override
-    public Doctor findDoctor(Integer id) {
+    public Doctor findDoctor(Long id) {
         Doctor doctor = idoctorrepository.findById(id).orElse(null);
         return doctor;
     }

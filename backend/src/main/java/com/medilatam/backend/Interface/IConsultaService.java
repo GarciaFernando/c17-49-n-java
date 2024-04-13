@@ -5,10 +5,19 @@ import com.medilatam.backend.Entity.Consulta;
 import java.util.List;
 
 public interface IConsultaService {
-    void save(Consulta consulta);
-    List<Consulta> getAll();
-    Consulta findConsulta(Long id);
-    void deleteConsulta(Long id);
-    void edit(Consulta consulta);
+    
+    //Expone la lista de Consultas
+    public List<Consulta> getConsulta();
+    
+    //Guarda una consulta
+    public void saveConsulta(Consulta consulta);
+    
+    //Eliminar una consulta por ID
+    public void deleteConsulta(Long id);
+    
+    //Buscar una consulta por ID
+    public Consulta findConsulta(Long id);
+    
+    
 
 }

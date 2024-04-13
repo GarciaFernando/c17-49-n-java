@@ -1,6 +1,6 @@
 package com.medilatam.backend.Controller;
 
-import com.medilatam.backend.contracts.PersonaDto;
+import com.medilatam.backend.Dto.PersonaDto;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

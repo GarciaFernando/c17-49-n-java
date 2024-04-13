@@ -24,7 +24,7 @@ public class DoctorController {
     
     //Obtener Doctores
     @GetMapping("doctor/show")
-    public List<Doctor> getPersona(){
+    public List<Doctor> getDoctor(){
         return idoctorservice.getDoctor();
     }
     
@@ -37,14 +37,14 @@ public class DoctorController {
     
     //Borrar Doctores
     @DeleteMapping("doctor/delete/{id}")
-    public String deleteDoctor(@PathVariable Integer id) {
+    public String deleteDoctor(@PathVariable Long id) {
         idoctorservice.deleteDoctor(id);
         return "Success";
     }
     
     //Editar los Doctores
     @PutMapping("/doctor/edit/{id}")
-    public Doctor editDoctor (@PathVariable Integer id,
+    public Doctor editDoctor (@PathVariable Long id,
                                             @RequestParam("nombre") String nuevoNombre,
                                             @RequestParam("especialidad") String nuevoEspecialidad,
                                             @RequestParam("horarioAtencion") String nuevoHorarioAtencion,

@@ -12,9 +12,12 @@ import lombok.Setter;
 import java.util.Date;
 
 @Entity
+
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Getter @Setter
+
 @Table(name = "consulta")
 public class Consulta {
 
@@ -53,6 +56,4 @@ public class Consulta {
     private TipoConsulta tipo;
 
     private Float calificacion;
-
-
 }
