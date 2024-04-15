@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import ImageProfile from '../../../public/imageProfile/avatar.png'
 
 interface Props {
     imagen: string;
@@ -8,14 +8,16 @@ interface Props {
 }
 
 export const ImagenAvatar = ({ imagen, height, width }: Props) => {
-    console.log(imagen)
     return (
         <Image
-            src={imagen}
+            src={ImageProfile}
             alt='imagen avatar'
-            className="rounded-full"
-            height={height}
-            width={width}
+            className='rounded-full'
+            style={{
+                objectFit: 'cover',
+                width: width,
+                height: height
+            }}
         />
     )
 }

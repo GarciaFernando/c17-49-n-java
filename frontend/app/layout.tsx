@@ -23,7 +23,7 @@ export default function RootLayout({
         <header>
           <Background />
         </header>
-        <section className="flex flex-col w-[300px] h-[550px] p-2 mb-0 mx-6 gap-6 -mt-[180px] items-center bg-white rounded-xl relative shadow-lg">
+        <section className=" fixed w-[300px] h-[550px] p-4 ml-6 -mt-60 bg-white rounded-xl shadow-2xl box-content">
           <Navbar />
         </section>
         {children}

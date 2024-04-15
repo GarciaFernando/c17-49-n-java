@@ -1,12 +1,16 @@
 import Image from "next/image"
 import { ImagenAvatar } from "./ImagenAvatar"
 import Link from "next/link"
+import { BotonPrincipal } from "./BotonPrincipal"
+import { CalendarDaysIcon, DevicePhoneMobileIcon, UserCircleIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
 
-const links=[
-    { name: 'Reserva de turnos', href: '#', icon: "calendar.svg" },
-    { name: 'Mis consultas', href: '#', icon: "nota.svg" },
-    { name: 'Perfil', href: '#', icon: "user.svg" },
-    { name: 'Atención virtual', href: '#', icon: "celular.svg" },
+
+
+const links = [
+    { name: 'Reserva de turnos', href: '#', icon: CalendarDaysIcon },
+    { name: 'Mis consultas', href: '#', icon: DocumentTextIcon },
+    { name: 'Perfil', href: '#', icon: UserCircleIcon },
+    { name: 'Atención virtual', href: '#', icon: DevicePhoneMobileIcon },
 ]
 
 export const Navbar = () => {
@@ -20,28 +24,28 @@ export const Navbar = () => {
                     width={500}
                 />
             </header>
-            <div className="flex flex-col gap-4 items-center">
+            <div className="flex flex-col space-y-2 items-center mt-4">
                 <ImagenAvatar imagen={'/imageProfile/avatar.png'} width={150} height={150} />
-                <div className="flex justify-between">
-                    <button type="button" className="text-white bg-mlt-600 hover:bg-mlt-800  focus:outline-none font-medium rounded-full text-sm px-8 py-1 text-center me-10 mb-2">Login</button>
-                    <button type="button" className="text-white bg-mlt-600 hover:bg-mlt-800 focus:outline-none font-medium rounded-full text-sm px-6 py-1 text-center me-2 mb-2">Registro</button>
+                <div className="flex space-x-10 pb-4  border-b-2">
+                    <BotonPrincipal name={"Login"} />
+                    <BotonPrincipal name={"Registro"} />
                 </div>
             </div>
-            <nav className="flex flex-col grow space-x-0 space-y-2 w-full">
-            {links.map((link) => {
-        const LinkIcon = link.icon;
-        return (
-          <Link
-            key={link.name}
-            href={link.href}
-            className="flex h-[48px] grow items-center justify-start gap-2 rounded-md p-3 text-sm font-medium hover:bg-mlt-600 hover:text-mlt-100"
-          >
-            <Image src={`/icon/${LinkIcon}`} alt={LinkIcon} className="w-6" width={32} height={32}/>
-            <p className="hidden md:block">{link.name}</p>
-          </Link >
-        );
-      })} 
-    </nav >
-</>
+            <nav className="flex flex-col grow space-x-0 space-y-3 w-full mt-2">
+                {links.map((link) => {
+                    const LinkIcon = link.icon;
+                    return (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="flex h-[48px] grow items-center justify-start gap-2 rounded-md p-3 text-sm font-medium hover:bg-mlt-600 group hover:text-white"
+                        >
+                            <LinkIcon className="w-6" />
+                            <p>{link.name}</p>
+                        </Link >
+                    );
+                })}
+            </nav >
+        </>
     )
 }
