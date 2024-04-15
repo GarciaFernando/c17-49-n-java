@@ -27,8 +27,8 @@ public class Consulta {
     private Doctor doctor;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="paciente_id", nullable = false)
-    private PersonaEntity paciente;
+    @JoinColumn(name="personaEntity_id", nullable = false)
+    private PersonaEntity personaEntity;
 
     @NotNull
     @Size(min=1, max=30, message="Número de caracteres incorrectos")

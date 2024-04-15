@@ -1,6 +1,6 @@
 package com.medilatam.backend.Service;
 
-import com.medilatam.backend.repositories.PersonaRepository;
+import com.medilatam.backend.Repository.PersonaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

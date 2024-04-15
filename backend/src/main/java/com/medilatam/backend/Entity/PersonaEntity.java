@@ -3,6 +3,7 @@ package com.medilatam.backend.Entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
 @Data
 @Entity
 @Table(name = "persona")
@@ -20,4 +21,7 @@ public class PersonaEntity {
 
     @Column(name = "password")
     private String password;
+
+    @OneToMany(mappedBy = "personaEntity", cascade = CascadeType.ALL)
+    private List<Consulta> consultas;
 }
