@@ -1,6 +1,7 @@
 package com.medilatam.backend.Controller;
 
 
+import com.medilatam.backend.Dto.ConsultaRequest;
 import com.medilatam.backend.Entity.Consulta;
 import com.medilatam.backend.Entity.Doctor;
 import com.medilatam.backend.Entity.EstadoConsulta;
@@ -31,51 +32,26 @@ public class ConsultaController {
     
     //Crea una consulta
     @PostMapping("/createConsulta")
-    public ResponseEntity<?> createConsulta(@RequestBody Consulta consulta){
-        iConsultaService.saveConsulta(consulta);
-        return ResponseEntity.status(HttpStatus.OK).body("Success");
+    public ResponseEntity<?> createConsulta(@RequestBody ConsultaRequest consulta){
+        return iConsultaService.saveConsulta(consulta);
     }
     
     //Borra una consulta siguiendo su ID
     @DeleteMapping("/deleteConsulta/{id}")
     public ResponseEntity<?> deleteConsulta(@PathVariable Long id){
-        iConsultaService.deleteConsulta(id);
-        return ResponseEntity.status(HttpStatus.OK).body("Consulta Eliminada con exito");
+        return iConsultaService.deleteConsulta(id);
     }
     
     
     //Edita una consulta
     @PutMapping("/editConsulta")
-    public ResponseEntity<?> editConsulta(@PathVariable Long id,
-                                                                   @RequestParam("doctor") Doctor nuevoDoctor,
-                                                                   @RequestParam("paciente") PersonaEntity nuevoPaciente,
-                                                                   @RequestParam("especialidad") String nuevaEspecialidad,
-                                                                   @RequestParam("precio") Float nuevoPrecio,
-                                                                   @RequestParam("fecha") Date nuevaFecha,
-                                                                   @RequestParam("descripcion") String nuevaDescripcion,
-                                                                   @RequestParam("estado de consulta") EstadoConsulta nuevoEstadoDeConsulta,
-                                                                   @RequestParam("Tipo de consulta") TipoConsulta nuevoTipoDeConsulta,
-                                                                   @RequestParam("calificacion") Float nuevaCalificacion){
-        
-        //Busca la consulta según la ID dada para guardarla dentro de la variable consulta
-        Consulta consulta = iConsultaService.findConsulta(id);
-        
-        //Aplica los cambios a la consulta guardada dentro de la variable
-        consulta.setDoctor(nuevoDoctor);
-        consulta.setPaciente(nuevoPaciente);
-        consulta.setEspecialidad(nuevaEspecialidad);
-        consulta.setPrecio(nuevoPrecio);
-        consulta.setFecha(nuevaFecha);
-        consulta.setDescripcion(nuevaDescripcion);
-        consulta.setEstado(nuevoEstadoDeConsulta);
-        consulta.setTipo(nuevoTipoDeConsulta);
-        consulta.setCalificacion(nuevaCalificacion);
-        
-        //Guarda todos los cambios realizados a dicha consulta
-        iConsultaService.saveConsulta(consulta);
+    public ResponseEntity<?> editConsulta(@RequestParam(name = "id")  Long id,
+                                                                @RequestParam(name="descripcion") String nuevaDescripcion,
+                                                                @RequestParam(name = "estado") Integer nuevoEstadoDeConsulta,
+                                                                @RequestParam(name = "fecha") String nuevaFecha){
         
         //Retorna un status positivo si se realizó correctamente
-        return ResponseEntity.status(HttpStatus.OK).body("Se modifico la consulta con éxito");
+        return iConsultaService.editConsulta(id, nuevaDescripcion, nuevoEstadoDeConsulta, nuevaFecha);
     }
 
 
