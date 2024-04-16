@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @author Franklynjsb
  */
 
-@Service
+
 @Transactional
 public interface IDoctorService {
     

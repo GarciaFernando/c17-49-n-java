@@ -1,23 +1,27 @@
 package com.medilatam.backend.Interface;
 
+import com.medilatam.backend.Dto.ConsultaRequest;
 import com.medilatam.backend.Entity.Consulta;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
 public interface IConsultaService {
     
     //Expone la lista de Consultas
-    public List<Consulta> getConsulta();
+    List<Consulta> getConsulta();
     
     //Guarda una consulta
-    public void saveConsulta(Consulta consulta);
+    ResponseEntity<?> saveConsulta(ConsultaRequest consulta);
     
     //Eliminar una consulta por ID
-    public void deleteConsulta(Long id);
+    ResponseEntity<?> deleteConsulta(Long id);
     
     //Buscar una consulta por ID
-    public Consulta findConsulta(Long id);
-    
-    
+    ResponseEntity<?> findConsulta(Long id);
 
+    ResponseEntity<?> getConsultasNoAtendidas();
+
+
+    ResponseEntity<?> editConsulta(Long id, String nuevaDescripcion, Integer nuevoEstadoDeConsulta, String nuevaFecha);
 }

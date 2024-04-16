@@ -4,10 +4,7 @@ package com.medilatam.backend.Entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 
@@ -16,9 +13,12 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@Getter @Setter
+@Getter @Setter @Builder
+
+
 
 @Table(name = "consulta")
+
 public class Consulta {
 
     @Id
@@ -30,7 +30,7 @@ public class Consulta {
     private Doctor doctor;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="paciente_id", nullable = false)
+    @JoinColumn(name="paciente_id")
     private PersonaEntity paciente;
 
     @NotNull
