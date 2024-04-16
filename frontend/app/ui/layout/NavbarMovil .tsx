@@ -17,8 +17,7 @@ const links = [
 export const NavbarMovil = () => {
     return (
 
-        <section className="flex relative flex-col overflow-hidden max-w-[320px] -mt-20 mx-auto justify-center items-center p-4 space-x-1 bg-white rounded-xl shadow-2xl box-content md:hidden">
-
+        <section className="flex relative flex-col overflow-hidden max-w-[320px] -mt-20 mx-auto px-10 justify-center items-center p-4 space-x-1 bg-white rounded-xl shadow-2xl box-content md:hidden">
             <header className="flex justify-center items-center">
                 <Image
                     src='/Medilatam.svg'
