@@ -1,8 +1,11 @@
 package com.medilatam.backend.Controller;
 
 import com.medilatam.backend.Entity.Doctor;
+import com.medilatam.backend.Interface.IConsultaService;
 import com.medilatam.backend.Interface.IDoctorService;
 import java.util.List;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,13 +21,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Franklynjsb
  */
 @RestController
+@RequiredArgsConstructor
 public class DoctorController {
     
     @Autowired IDoctorService idoctorservice;
+    //private IConsultaService iConsultaService;
+
     
     //Obtener Doctores
     @GetMapping("doctor/show")
-    public List<Doctor> getPersona(){
+    public List<Doctor> getDoctor(){
         return idoctorservice.getDoctor();
     }
     
@@ -37,14 +43,14 @@ public class DoctorController {
     
     //Borrar Doctores
     @DeleteMapping("doctor/delete/{id}")
-    public String deleteDoctor(@PathVariable Integer id) {
+    public String deleteDoctor(@PathVariable Long id) {
         idoctorservice.deleteDoctor(id);
         return "Success";
     }
     
     //Editar los Doctores
     @PutMapping("/doctor/edit/{id}")
-    public Doctor editDoctor (@PathVariable Integer id,
+    public Doctor editDoctor (@PathVariable Long id,
                                             @RequestParam("nombre") String nuevoNombre,
                                             @RequestParam("especialidad") String nuevoEspecialidad,
                                             @RequestParam("horarioAtencion") String nuevoHorarioAtencion,

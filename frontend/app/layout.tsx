@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Background } from "./ui/layout/Background";
+import { Navbar } from "./ui/layout/Navbar";
+import { NavbarMovil } from "./ui/layout/NavbarMovil ";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,11 +16,21 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+
 }>) {
   return (
     <html lang="es">
       <link rel="icon" href="/favicon.svg" />
-      <body className={inter.className}>{children}</body>
-    </html>
+      <body className={`bg-slate-200 ${inter.className}`}>
+        <header>
+          <Background />
+        </header>
+        <NavbarMovil />
+        <div className="flex">
+          <Navbar />
+          {children}
+        </div>
+      </body>
+    </html >
   );
 }

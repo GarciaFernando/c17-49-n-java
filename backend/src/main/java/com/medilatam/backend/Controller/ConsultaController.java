@@ -1,10 +1,10 @@
 package com.medilatam.backend.Controller;
 
 
+import com.medilatam.backend.Dto.ConsultaRequest;
 import com.medilatam.backend.Entity.Consulta;
 import com.medilatam.backend.Interface.IConsultaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,34 +16,37 @@ public class ConsultaController {
 
     @Autowired
     IConsultaService iConsultaService;
-
-    @GetMapping("/show")
+    
+    //Expone las consultas creadas
+    @GetMapping("/showConsulta")
     public List<Consulta> getConsulta(){
-        return iConsultaService.getAll();
+        return iConsultaService.getConsulta();
     }
-
-    @PostMapping("/create")
-    public ResponseEntity<?> createConsulta(@RequestBody Consulta consulta){
-        iConsultaService.save(consulta);
-        return ResponseEntity.status(HttpStatus.OK).body("Success");
+    
+    
+    //Crea una consulta
+    @PostMapping("/createConsulta")
+    public ResponseEntity<?> createConsulta(@RequestBody ConsultaRequest consulta){
+        return iConsultaService.saveConsulta(consulta);
     }
-
-    @PutMapping("/edit")
-    public ResponseEntity<?> editConsulta(@RequestBody Consulta consulta){
-        iConsultaService.edit(consulta);
-        return ResponseEntity.status(HttpStatus.OK).body("Se modifico la consulta con éxito");
-    }
-
-    @DeleteMapping("/delete/{id}")
+    
+    //Borra una consulta siguiendo su ID
+    @DeleteMapping("/deleteConsulta/{id}")
     public ResponseEntity<?> deleteConsulta(@PathVariable Long id){
-        iConsultaService.deleteConsulta(id);
-        return ResponseEntity.status(HttpStatus.OK).body("Consulta Eliminada con exito");
+        return iConsultaService.deleteConsulta(id);
+    }
+    
+    
+    //Edita una consulta
+    @PutMapping("/editConsulta")
+    public ResponseEntity<?> editConsulta(@RequestParam(name = "id")  Long id,
+                                                                @RequestParam(name="descripcion") String nuevaDescripcion,
+                                                                @RequestParam(name = "estado") Integer nuevoEstadoDeConsulta,
+                                                                @RequestParam(name = "fecha") String nuevaFecha){
+        
+        //Retorna un status positivo si se realizó correctamente
+        return iConsultaService.editConsulta(id, nuevaDescripcion, nuevoEstadoDeConsulta, nuevaFecha);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Consulta> findConsulta(@PathVariable Long id){
-        return ResponseEntity.ok(iConsultaService.findConsulta(id));
-
-    }
 
 }

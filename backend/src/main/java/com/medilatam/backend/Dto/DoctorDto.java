@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 /**
  *
- * @author franc
+ * @author Franklynjsb
  */
 
 @Getter @Setter

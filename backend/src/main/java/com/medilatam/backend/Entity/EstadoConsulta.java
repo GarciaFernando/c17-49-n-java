@@ -1,5 +1,5 @@
 package com.medilatam.backend.Entity;
 
 public enum EstadoConsulta {
-    PENDIENTE,REALIZADA,CANCELADA
+    NO_ATENDIDO,ATENDIDO,CANCELADA
 }

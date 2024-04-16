@@ -3,14 +3,13 @@ package com.medilatam.backend.Interface;
 import com.medilatam.backend.Entity.Doctor;
 import jakarta.transaction.Transactional;
 import java.util.List;
-import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Franklynjsb
  */
 
-@Service
+
 @Transactional
 public interface IDoctorService {
     
@@ -21,9 +20,9 @@ public interface IDoctorService {
     public void saveDoctor (Doctor doctor);
     
     //Eliminar un Objeto que sea Doctor
-    public void deleteDoctor (Integer id);
+    public void deleteDoctor (Long id);
     
     //Buscar un Objeto del tipo Doctor por Id
-    public Doctor findDoctor (Integer id);
+    public Doctor findDoctor (Long id);
     
 }

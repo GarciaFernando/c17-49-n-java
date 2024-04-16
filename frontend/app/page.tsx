@@ -1,13 +1,8 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="flex justify-center pt-4">
-      <Image
-        src="/Medilatam.svg"
-        alt="logo Medilatam"
-        width={1000}
-        height={760} />
+    <section className="flex flex-col w-[900px] h-[800px]">
+      
     </section>
   );
 }
