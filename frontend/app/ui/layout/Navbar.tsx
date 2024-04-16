@@ -23,11 +23,11 @@ export const Navbar = () => {
 
     return (
         <>
-            <div className={`fixed shadow-2xl rounded-xl w-[332px] h-[100] bg-white  p-2 ml-6 -mt-64 items-center justify-end hidden md:flex`}>
+            <div className={`fixed shadow-2xl rounded-xl w-[332px] bg-white  p-2 ml-6 -mt-64 items-center justify-end hidden md:flex`}>
                 <button onClick={toggleNavbar}><Bars3Icon className={`w-6 hover:text-white rounded hover:bg-mlt-600 transition-colors duration-300 ${isNavbarVisible ? "hidden" : ""}`} /></button>
                 <button onClick={toggleNavbar}><XMarkIcon className={`w-6 hover:text-white rounded hover:bg-mlt-600 transition-colors duration-300 ${isNavbarVisible ? "" : "hidden "}`} /></button>
             </div >
-            <section className={`fixed flex-col rounded-xl w-[300px] h-[600px] mr-10 overflow-hidden hidden p-4 ml-6 -mt-52 bg-white shadow-2xl box-content md:flex transition-transform duration-500 transform 
+            <section className={`fixed flex-col rounded-xl w-[300px] h-[550px] mr-10 overflow-hidden hidden p-4 ml-6 -mt-52 bg-white shadow-2xl box-content md:flex transition-transform duration-500 transform 
             ${isNavbarVisible ? 'translate-x-0' : '-translate-x-96 fixed'}`}>
                 <header>
                     <Image
@@ -44,7 +44,7 @@ export const Navbar = () => {
                         <BotonPrincipal name={"Registro"} />
                     </div>
                 </div>
-                <nav className="flex flex-col space-x-0 space-y-3 w-full mt-2">
+                <nav className="flex flex-col space-x-0 -space-y-1 w-full mt-3">
                     {links.map((link) => {
                         const LinkIcon = link.icon;
                         return (
