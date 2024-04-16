@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Background } from "./ui/layout/Background";
 import { Navbar } from "./ui/layout/Navbar";
+import { NavbarMovil } from "./ui/layout/NavbarMovil ";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+
 }>) {
   return (
     <html lang="es">
@@ -23,10 +25,11 @@ export default function RootLayout({
         <header>
           <Background />
         </header>
-        <section className=" fixed w-[300px] h-[550px] p-4 ml-6 -mt-60 bg-white rounded-xl shadow-2xl box-content">
+        <NavbarMovil />
+        <div className="flex">
           <Navbar />
-        </section>
-        {children}
+          {children}
+        </div>
       </body>
     </html >
   );

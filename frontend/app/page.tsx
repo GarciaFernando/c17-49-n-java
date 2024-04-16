@@ -1,8 +1,8 @@
 
 export default function Home() {
   return (
-    <section className="flex justify-center pt-4">
-
+    <section className="flex flex-col w-[900px] h-[800px]">
+      
     </section>
   );
 }
