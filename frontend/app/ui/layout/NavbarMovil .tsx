@@ -44,7 +44,7 @@ export const NavbarMovil = () => {
                             href={link.href}
                             className="flex w-10 grow flex-col items-center justify-center px-0 rounded-md py-3 font-medium hover:bg-mlt-600 group hover:text-white"
                         >
-                            <LinkIcon className="w-4" title={link.name} />
+                            <LinkIcon className="w-8" title={link.name} />
                             <p className="text-[6px] font-semibold group-hover:text-white">{link.name}</p>
                         </Link >
                     );

@@ -25,8 +25,8 @@ export default function RootLayout({
         <header>
           <Background />
         </header>
+        <NavbarMovil />
         <div className="flex">
-          <NavbarMovil />
           <Navbar />
           {children}
         </div>
