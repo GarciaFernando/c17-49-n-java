@@ -27,7 +27,7 @@ export const Navbar = () => {
                 <button onClick={toggleNavbar}><Bars3Icon className={`w-6 hover:text-white rounded hover:bg-mlt-600 transition-colors duration-300 ${isNavbarVisible ? "hidden" : ""}`} /></button>
                 <button onClick={toggleNavbar}><XMarkIcon className={`w-6 hover:text-white rounded hover:bg-mlt-600 transition-colors duration-300 ${isNavbarVisible ? "" : "hidden "}`} /></button>
             </div >
-            <section className={`fixed flex-col rounded-xl w-[300px] h-[550px] mr-10 overflow-hidden hidden p-4 ml-6 -mt-52 bg-white shadow-2xl box-content md:flex transition-transform duration-500 transform 
+            <section className={`fixed flex-col rounded-xl w-[300px] h-[500px] mr-10 overflow-hidden hidden p-4 ml-6 -mt-52 bg-white shadow-2xl box-content md:flex transition-transform duration-500 transform 
             ${isNavbarVisible ? 'translate-x-0' : '-translate-x-96 fixed'}`}>
                 <header>
                     <Image
@@ -38,20 +38,20 @@ export const Navbar = () => {
                     />
                 </header>
                 <div className="flex flex-col space-y-2 items-center mt-4">
-                    <ImagenAvatar imagen={'/imageProfile/avatar.png'} width={150} height={150} />
+                    <ImagenAvatar imagen={'/imageProfile/avatar.png'} width={130} height={130} />
                     <div className="flex space-x-10 pb-4  border-b-2">
                         <BotonPrincipal name={"Login"} />
                         <BotonPrincipal name={"Registro"} />
                     </div>
                 </div>
-                <nav className="flex flex-col space-x-0 -space-y-1 w-full mt-3">
+                <nav className="flex flex-col space-x-0 -space-y-2 w-full mt-2">
                     {links.map((link) => {
                         const LinkIcon = link.icon;
                         return (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="flex h-[48px] grow items-center justify-start gap-2 rounded-md p-2 text-sm font-medium hover:bg-mlt-600 group hover:text-white"
+                                className="flex h-[48px] grow items-center justify-start gap-2 rounded-md px-2 text-sm font-medium hover:bg-mlt-600 group hover:text-white"
                             >
                                 <LinkIcon className="w-6" />
                                 <p>{link.name}</p>
