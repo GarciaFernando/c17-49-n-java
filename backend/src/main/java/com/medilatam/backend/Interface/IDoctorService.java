@@ -3,7 +3,6 @@ package com.medilatam.backend.Interface;
 import com.medilatam.backend.Entity.Doctor;
 import jakarta.transaction.Transactional;
 import java.util.List;
-import org.springframework.stereotype.Service;
 
 /**
  *

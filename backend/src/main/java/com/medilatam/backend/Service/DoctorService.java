@@ -16,17 +16,21 @@ public class DoctorService implements IDoctorService {
     
     @Autowired IDoctorRepository idoctorrepository;
     
+    //Obtiene la lista de doctores
     @Override
     public List<Doctor> getDoctor() {
         List<Doctor> doctor = idoctorrepository.findAll();
         return doctor;
     }
 
+    //Guarda dentro de la lista el doctor nuevo
     @Override
     public void saveDoctor(Doctor doctor) {
         idoctorrepository.save(doctor);
     }
 
+    
+    
     @Override
     public void deleteDoctor(Long id) {
         idoctorrepository.deleteById(id);

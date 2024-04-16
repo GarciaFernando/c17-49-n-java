@@ -9,14 +9,9 @@ import lombok.*;
 import java.util.Date;
 
 @Entity
-
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Getter @Setter @Builder
-
-
-
 @Table(name = "consulta")
 
 public class Consulta {

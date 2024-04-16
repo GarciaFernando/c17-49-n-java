@@ -1,6 +1,5 @@
 package com.medilatam.backend.Dto;
 
-import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -17,16 +16,22 @@ public class ConsultaRequest implements java.io.Serializable {
 
    @NotNull
     private String fecha;
+   
    @NotEmpty
     private String descripcion;
+   
     @NotEmpty
     private Integer estadoConsulta;
+    
     @NotNull
     private Integer tipoConsulta;
+    
     @NotNull
     private Float calificacion;
+    
     @NotNull
     private Long personaId;
+    
     @NotNull
     private Long doctorId;
 

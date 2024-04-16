@@ -3,14 +3,8 @@ package com.medilatam.backend.Controller;
 
 import com.medilatam.backend.Dto.ConsultaRequest;
 import com.medilatam.backend.Entity.Consulta;
-import com.medilatam.backend.Entity.Doctor;
-import com.medilatam.backend.Entity.EstadoConsulta;
-import com.medilatam.backend.Entity.PersonaEntity;
-import com.medilatam.backend.Entity.TipoConsulta;
 import com.medilatam.backend.Interface.IConsultaService;
-import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
