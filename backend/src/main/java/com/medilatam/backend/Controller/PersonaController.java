@@ -1,6 +1,5 @@
 package com.medilatam.backend.Controller;
 
-import com.medilatam.backend.Dto.PersonaDto;
 import com.medilatam.backend.Entity.PersonaEntity;
 import com.medilatam.backend.Interface.IPersonaService;
 import org.springframework.beans.factory.annotation.Autowired;

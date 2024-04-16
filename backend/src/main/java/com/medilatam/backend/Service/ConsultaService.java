@@ -4,7 +4,6 @@ package com.medilatam.backend.Service;
 import com.medilatam.backend.Dto.ConsultaRequest;
 import com.medilatam.backend.Entity.Consulta;
 import com.medilatam.backend.Entity.EstadoConsulta;
-import com.medilatam.backend.Entity.TipoConsulta;
 import com.medilatam.backend.Interface.IConsultaService;
 import com.medilatam.backend.Repository.IConsultaRepository;
 import com.medilatam.backend.Repository.IDoctorRepository;
@@ -24,14 +23,17 @@ import java.util.List;
 
 @Slf4j
 public class ConsultaService implements IConsultaService {
+    
     @Autowired
     IConsultaRepository consultaRepository;
+    
     private final PersonaRepository personaRepository;
     private final IDoctorRepository doctorRepository;
     
     //Obtiene una lista de las consultas
     @Override
     public List<Consulta> getConsulta() {
+        
         //Crea una lista según las consultas que se hayan guardado
         List<Consulta> consulta = consultaRepository.findAll();
 
@@ -45,7 +47,9 @@ public class ConsultaService implements IConsultaService {
     public ResponseEntity<?> saveConsulta(ConsultaRequest consulta) {
 
         Date fechaRecibida= UtilMethods.convertStringToSqlDate(consulta.getFecha());
-        Consulta consulta1 = Consulta.builder() //Crea una consulta con los datos recibidos
+        
+        //Crea una consulta con los datos recibidos
+        Consulta consulta1 = Consulta.builder()
                 .fecha(fechaRecibida)
                 .descripcion(consulta.getDescripcion())
                 .estado(UtilMethods.setEstadoConsulta(consulta.getEstadoConsulta()))
@@ -68,9 +72,12 @@ public class ConsultaService implements IConsultaService {
     //Según el ID dado se busca dicha consulta para eliminarla
     @Override
     public ResponseEntity<?> deleteConsulta(Long id) {
-        if (!consultaRepository.existsById(id)) { //Si no existe la consulta con el ID dado
+        
+        //Si no existe la consulta con el ID dado
+        if (!consultaRepository.existsById(id)) {
             return ResponseEntity.status(400).body("La consulta no existe");
         }
+        
         //Se elimina una consulta en particular del repositorio designada por su ID
         consultaRepository.deleteById(id);
         return ResponseEntity.status(200).body("Consulta eliminada con éxito");

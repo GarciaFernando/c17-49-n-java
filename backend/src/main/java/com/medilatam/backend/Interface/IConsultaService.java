@@ -20,8 +20,9 @@ public interface IConsultaService {
     //Buscar una consulta por ID
     ResponseEntity<?> findConsulta(Long id);
 
+    //Busca consultas no atendidas por id - REVISION
     ResponseEntity<?> getConsultasNoAtendidas();
 
-
+    //Edita una consulta siendo esta identificada por su id
     ResponseEntity<?> editConsulta(Long id, String nuevaDescripcion, Integer nuevoEstadoDeConsulta, String nuevaFecha);
 }

@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DoctorController {
     
     @Autowired IDoctorService idoctorservice;
-    private IConsultaService iConsultaService;
+    //private IConsultaService iConsultaService;
 
     
     //Obtener Doctores
