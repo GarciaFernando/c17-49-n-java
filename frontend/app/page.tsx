@@ -1,8 +1,11 @@
+'use client'
 
-export default function Home() {
-  return (
-    <section className="flex flex-col w-[900px] h-[800px]">
-      
-    </section>
-  );
+import { useRouter } from 'next/navigation';
+
+export default function Page() {
+  const router = useRouter();
+
+  router.replace('/dashboard');
+
+  return;
 }
