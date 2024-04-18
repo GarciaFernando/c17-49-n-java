@@ -10,4 +10,9 @@ public interface IPersonaService {
     PersonaEntity personaPorId(Long id);
 
     void guardarPersona(PersonaEntity personaEntity);
+
+    void actualizarPersonaPorId(Long id, PersonaEntity personaDetails);
+
+    void eliminarPersonaPorId(Long id);
+
 }

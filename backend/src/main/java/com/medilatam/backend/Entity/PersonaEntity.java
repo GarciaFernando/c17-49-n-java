@@ -20,4 +20,7 @@ public class PersonaEntity {
 
     @Column(name = "password")
     private String password;
+
+    @Column(name = "foto")
+    private String foto;
 }
