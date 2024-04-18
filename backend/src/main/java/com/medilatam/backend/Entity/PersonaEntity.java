@@ -7,6 +7,7 @@ import lombok.Data;
 @Entity
 @Table(name = "persona")
 public class PersonaEntity {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +21,7 @@ public class PersonaEntity {
 
     @Column(name = "password")
     private String password;
+
+    @Column(name = "foto")
+    private String foto;
 }

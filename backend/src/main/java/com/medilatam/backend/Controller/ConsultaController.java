@@ -48,5 +48,4 @@ public class ConsultaController {
         return iConsultaService.editConsulta(id, nuevaDescripcion, nuevoEstadoDeConsulta, nuevaFecha);
     }
 
-
 }
