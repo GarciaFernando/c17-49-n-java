@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ProjectConfig {
 
+    //Recibe una contraseña para poder encriptarla
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
