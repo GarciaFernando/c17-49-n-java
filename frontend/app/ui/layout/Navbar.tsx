@@ -14,10 +14,10 @@ import {
 import { useState } from 'react';
 
 const links = [
-  { name: 'Reserva de turnos', href: '/auth', icon: CalendarDaysIcon },
-  { name: 'Mis consultas', href: '#', icon: DocumentTextIcon },
-  { name: 'Perfil', href: '#', icon: UserCircleIcon },
-  { name: 'Atención virtual', href: '#', icon: DevicePhoneMobileIcon },
+  { name: 'Reserva de turnos', href: '/dashboard', icon: CalendarDaysIcon },
+  { name: 'Mis consultas', href: '/dashboard/misConsultas', icon: DocumentTextIcon },
+  { name: 'Perfil', href: '/dashboard/profile', icon: UserCircleIcon },
+  { name: 'Atención virtual', href: '/dashboard/atencionVirtual', icon: DevicePhoneMobileIcon },
 ];
 
 export const Navbar = () => {
@@ -58,8 +58,16 @@ export const Navbar = () => {
         <div className="flex flex-col space-y-2 items-center mt-4">
           <ImagenAvatar imagen={'/imageProfile/avatar.png'} width={130} height={130} />
           <div className="flex space-x-10 pb-4  border-b-2">
-            <BotonPrincipal name={'Login'} />
-            <BotonPrincipal name={'Registro'} />
+            <a
+              className="text-white bg-mlt-600 hover:bg-mlt-800 transition-colors focus:outline-none font-medium rounded-full text-sm text-center p-2 w-24"
+              href="/auth">
+              Login
+            </a>
+            <a
+              className="text-white bg-mlt-600 hover:bg-mlt-800 transition-colors focus:outline-none font-medium rounded-full text-sm text-center p-2 w-24"
+              href="/auth/register">
+              Registro
+            </a>
           </div>
         </div>
         <nav className="flex flex-col space-x-0 -space-y-2 w-full mt-2">
