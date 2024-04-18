@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --_access-menu-background-color: #021934;
+
+    --_access-menu-item-button-background: #0c8eae;
+
+    --_access-menu-item-color: rgba(255, 255, 255, .6);
+
+    --_access-menu-header-color: rgba(255, 255, 255, .87);
+
+    --_access-menu-item-button-active-color: #175d73;
+
+    --_access-menu-item-button-active-background-color: #fff;
+
+    --_access-menu-div-active-background-color: #fff;
+
+    --_access-menu-item-button-hover-color: rgba(255, 255, 255, .8);
+
+    --_access-menu-item-button-hover-background-color: #0cc0df;
+
+    --_access-menu-item-icon-color: rgba(255, 255, 255, .6);
+
+    --_access-menu-item-hover-icon-color: rgba(255, 255, 255, .8);
+
+    --_access-menu-item-active-icon-color: #fff;
+
+}
