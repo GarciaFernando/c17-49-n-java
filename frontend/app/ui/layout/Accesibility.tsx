@@ -99,11 +99,13 @@ const initAccessibility = () => {
       disableAnimations: true,
     } as ModulesOptions,
   };
-  new Accessibility(options);
+
+  const accesibility = new Accessibility(options);
 };
 
 export default function AccessibilityComponent() {
-  const [isOpen, setIsOpen] = useState(true);
+  Accessibility;
+  /* const [isOpen, setIsOpen] = useState(true);
   useEffect(() => {
     window.addEventListener('load', initAccessibility, false);
     return () => {
@@ -112,5 +114,5 @@ export default function AccessibilityComponent() {
   }, []);
   if (!isOpen) {
     return null;
-  }
+  } */
 }
