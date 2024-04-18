@@ -29,10 +29,10 @@ export const Navbar = () => {
   return (
     <div
       className={`flex-col transition-transform duration-0 transform ${
-        isNavbarVisible ? 'translate-x-0' : '-translate-x-80 w-1'
+        isNavbarVisible ? 'translate-x-0' : '-translate-x-60 w-1 fixed'
       }`}>
       <div
-        className={`shadow-2xl rounded-xl w-[332px] h-[40px] bg-white  p-2 ml-6 -mt-60 mb-3 items-center justify-end hidden md:flex`}>
+        className={`shadow-2xl rounded-xl w-[260px] h-[40px] bg-white  p-2 ml-6 -mt-60 mb-3 items-center justify-end hidden md:flex`}>
         <button onClick={toggleNavbar}>
           <Bars3Icon
             className={`w-6 hover:text-white rounded hover:bg-mlt-600 transition-colors duration-300 ${
@@ -49,27 +49,27 @@ export const Navbar = () => {
         </button>
       </div>
       <section
-        className={`flex-col rounded-xl w-[300px] h-[500px] mr-10 overflow-hidden hidden relative p-4 ml-6 bg-white shadow-2xl box-content md:flex transition-transform duration-0 transform 
-            ${isNavbarVisible ? 'translate-x-0' : '-translate-x-96'}`}>
+        className={`flex-col rounded-xl w-[229px] h-[530px] mr-6 overflow-hidden hidden relative p-4 ml-6 bg-white shadow-2xl box-content md:flex transition-transform duration-0 transform 
+            ${isNavbarVisible ? 'translate-x-0' : '-translate-x-20'}`}>
         <header>
           <Image src="/Medilatam.svg" alt="logo de la aplicación web" height={150} width={500} />
         </header>
         <div className="flex flex-col space-y-2 items-center mt-4">
           <ImagenAvatar imagen={'/imageProfile/avatar.png'} width={130} height={130} />
-          <div className="flex space-x-10 pb-4  border-b-2">
+          <div className="flex space-x-10 pb-4 border-b-2">
             <a
-              className="text-white bg-mlt-600 hover:bg-mlt-800 transition-colors focus:outline-none font-medium rounded-full text-sm text-center p-2 w-24"
+              className="text-white bg-mlt-600 hover:bg-mlt-800 hover:scale-105 duration-300  transition-colors focus:outline-none font-medium rounded-full text-sm text-center p-2 w-24"
               href="/auth">
               Login
             </a>
             <a
-              className="text-white bg-mlt-600 hover:bg-mlt-800 transition-colors focus:outline-none font-medium rounded-full text-sm text-center p-2 w-24"
+              className="text-white bg-mlt-600 hover:bg-mlt-800 hover:scale-105 duration-300 transition-colors focus:outline-none font-medium rounded-full text-sm text-center p-2 w-24"
               href="/auth/register">
               Registro
             </a>
           </div>
         </div>
-        <nav className="flex flex-col space-x-0 -space-y-2 w-full mt-2">
+        <nav className="flex flex-col space-x-0 space-y-4 w-full mt-2">
           {links.map((link) => {
             const LinkIcon = link.icon;
             return (

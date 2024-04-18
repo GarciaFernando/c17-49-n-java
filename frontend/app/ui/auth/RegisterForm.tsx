@@ -69,7 +69,9 @@ export const RegisterForm = () => {
           </div>
           <div className="flex justify-center space-x-4 items-center mt-4">
             <BotonPrincipal name="Registrarse" />
-            <a className="text-mlt-700 font-semibold" href="/auth">
+            <a
+              className="text-mlt-700 font-semibold hover:scale-105 duration-300 hover:text-mlt-800"
+              href="/auth">
               Login
             </a>
           </div>

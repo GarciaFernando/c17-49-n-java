@@ -54,7 +54,9 @@ export const LoginForm = () => {
           </div>
           <div className="flex justify-center space-x-4 items-center mt-4">
             <BotonPrincipal name="Login" />
-            <a className="text-mlt-700 font-semibold" href="/auth/register">
+            <a
+              className="text-mlt-700 font-semibold hover:scale-105 duration-300 hover:text-mlt-800"
+              href="/auth/register">
               Registrarse
             </a>
           </div>

@@ -28,3 +28,40 @@
     --_access-menu-item-active-icon-color: #fff;
 
 }
+
+/* Estilo del contenedor con scroll */
+.scroll-container {
+    overflow-y: scroll;
+    /* Mostrar scroll vertical */
+    overflow-x: hidden;
+    /* Ocultar scroll horizontal si lo hay */
+}
+
+/* Estilo del scrollbar */
+.scroll-container::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+    /* Ancho del scrollbar */
+}
+
+/* Estilo del track del scrollbar */
+.scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+
+    /* Color de fondo del track */
+}
+
+/* Estilo del thumb (la parte que se puede arrastrar) del scrollbar */
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #175d73;
+    border-radius: 10px;
+    /* Color del thumb */
+}
+
+/* Estilo del thumb en hover */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #093243;
+    border-radius: 10px;
+    /* Cambio de color en hover */
+}
