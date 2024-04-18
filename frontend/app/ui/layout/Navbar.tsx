@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import { ImagenAvatar } from '../ImagenAvatar';
 import Link from 'next/link';
-import { BotonPrincipal } from '@/app/ui/layout/BotonPrincipal';
 import {
   CalendarDaysIcon,
   DevicePhoneMobileIcon,

@@ -1,6 +1,7 @@
 import { Background } from '../ui/layout/Background';
 import { Navbar } from '../ui/layout/Navbar';
 import { NavbarMovil } from '../ui/layout/NavbarMovil ';
+import AccessibilityComponent from '../ui/layout/Accesibility';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -13,6 +14,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Navbar />
         {children}
       </div>
+      <footer>
+        <AccessibilityComponent />
+      </footer>
     </section>
   );
 }
