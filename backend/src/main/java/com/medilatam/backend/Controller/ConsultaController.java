@@ -40,9 +40,9 @@ public class ConsultaController {
     //Edita una consulta
     @PutMapping("/editConsulta")
     public ResponseEntity<?> editConsulta(@RequestParam(name = "id")  Long id,
-                                                                @RequestParam(name="descripcion") String nuevaDescripcion,
-                                                                @RequestParam(name = "estado") Integer nuevoEstadoDeConsulta,
-                                                                @RequestParam(name = "fecha") String nuevaFecha){
+                                          @RequestParam(name="descripcion") String nuevaDescripcion,
+                                          @RequestParam(name = "estado") Integer nuevoEstadoDeConsulta,
+                                          @RequestParam(name = "fecha") String nuevaFecha){
         
         //Retorna un status positivo si se realizó correctamente
         return iConsultaService.editConsulta(id, nuevaDescripcion, nuevoEstadoDeConsulta, nuevaFecha);

@@ -40,7 +40,7 @@ public class PersonaService implements IPersonaService {
     public void actualizarPersonaPorId(Long id, PersonaEntity personaDetails) {
 
         PersonaEntity personaEntity = personaRepository.findById(id).orElse(null);
-
+        //Name deprecate?
         personaEntity.setName(personaDetails.getName());
         personaEntity.setEmail(personaDetails.getEmail());
         personaEntity.setPassword(passwordEncoder.encode(personaEntity.getPassword()));
