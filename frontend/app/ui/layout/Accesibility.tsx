@@ -1,4 +1,5 @@
 'use client';
+import { useEffect } from 'react';
 import { Accessibility } from 'accessibility';
 
 interface IconOptions {
@@ -6,6 +7,7 @@ interface IconOptions {
   img: 'accessibility' | 'accessible';
   useEmojis: boolean;
 }
+
 interface ModulesOptions {
   increaseText: boolean;
   decreaseText: boolean;
@@ -23,6 +25,7 @@ interface ModulesOptions {
   disableAnimations: boolean;
   hotkeyPrefix: string;
 }
+
 interface Language {
   textToSpeechLang: string;
   speechToTextLang: string;
@@ -48,6 +51,7 @@ const labels = {
   disableAnimations: 'Deshabilitar animaciones',
   hotkeyPrefix: 'Acceso directo:',
 };
+
 const initAccessibility = () => {
   const options = {
     labels: labels,
@@ -84,11 +88,16 @@ const initAccessibility = () => {
       disableAnimations: true,
     } as ModulesOptions,
   };
+
   new Accessibility(options);
 };
 
-window.addEventListener('load', initAccessibility, false);
+const AccessibilityComponent = () => {
+  useEffect(() => {
+    initAccessibility();
+  }, []); // Ejecutar solo una vez después de que el componente se monte
 
-export default function AccessibilityComponent() {
   return null;
-}
+};
+
+export default AccessibilityComponent;
