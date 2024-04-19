@@ -2,10 +2,18 @@ import { AtSymbolIcon, KeyIcon } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { BotonPrincipal } from '../layout/BotonPrincipal';
 import { ImagenAvatar } from '../ImagenAvatar';
+import Link from 'next/link';
 
 export const LoginForm = () => {
   return (
     <div>
+      <div className="justify-end ml-20 hidden md:flex w-full ">
+        <Link
+          className="bg-mlt-500 flex flex-col items-center rounded-2xl w-32 p-6 hover:scale-110 duration-300"
+          href="/">
+          <ArrowRightIcon className="absolute pointer-events-none h-[50px] w-[50px] -translate-y-1/2 text-white rotate-180" />
+        </Link>
+      </div>
       <div className="flex justify-center -mb-20">
         <ImagenAvatar imagen="/imageProfile/avatar.png" height={200} width={200} />
       </div>
@@ -54,11 +62,11 @@ export const LoginForm = () => {
           </div>
           <div className="flex justify-center space-x-4 items-center mt-4">
             <BotonPrincipal name="Login" />
-            <a
+            <Link
               className="text-mlt-700 font-semibold hover:scale-105 duration-300 hover:text-mlt-800"
               href="/auth/register">
               Registrarse
-            </a>
+            </Link>
           </div>
         </div>
       </form>
