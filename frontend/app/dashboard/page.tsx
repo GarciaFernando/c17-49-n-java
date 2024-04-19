@@ -1,14 +1,7 @@
 import { Calendario } from '@/app/ui/Calendario';
 import { especialidades } from '@/mocks/especialidad.json';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 
-const Accessibility = dynamic(
-  () => {
-    return import('@/app/ui/layout/Accesibility');
-  },
-  { ssr: false }
-);
 export default async function Dashboard() {
   const doctores = especialidades[0].doctores;
   interface Especialidad {
@@ -17,12 +10,9 @@ export default async function Dashboard() {
   }
   return (
     <>
-      <Accessibility />;
-      <div className="p-1 mx-auto md:-mt-56 w-full max-w-6xl h-full -space-y-12">
+      <div className="mx-auto  w-full md:max-w-[1200px] h-full md:mr-6 space-y-6">
         <section className="bg-white rounded-xl shadow-2xl py-2">
-          <h1 className="font-bold text-lg text-center border-b-2 pt-2 mb-2 mx-2">
-            Especialidades
-          </h1>
+          <h1 className="font-bold text-lg text-center border-b-2 mb-1 mx-2">Especialidades</h1>
           <div className=" flex flex-wrap gap-2 justify-center">
             {especialidades.map((especialidad: Especialidad) => (
               <a
@@ -34,15 +24,15 @@ export default async function Dashboard() {
           </div>
         </section>
 
-        <section className="flex flex-col justify-center rounded-xl p-2 h-[350px]">
+        <section className="flex flex-col justify-center items-center rounded-xl">
           <Calendario />
         </section>
-        <div className="rounded-xl bg-white pb-10">
-          <h1 className="font-bold text-lg text-center border-b-2 pt-2 mb-2">
-            Profesionales Disponibles
-          </h1>
-        </div>
-        <section className="bg-white shadow-2xl rounded-2xl flex flex-col justify-start gap-1 h-48 px-2 overflow-y-scroll scroll-container">
+        <section className="bg-white shadow-2xl m-0 rounded-2xl flex flex-col justify-start gap-1 h-[210px] px-2 overflow-y-scroll scroll-container">
+          <div className="rounded-xl bg-white py-2 sticky top-0">
+            <h1 className="font-bold text-lg text-center border-b-2 mb-1">
+              Profesionales Disponibles
+            </h1>
+          </div>
           {doctores?.map((doctor: any) => (
             <div className="p-1" key={doctor.nombre}>
               <div className="grid grid-cols-[auto_250px_minmax(0,1fr)] gap-1 justify-center shadow-[0_0_5px] shadow-gray-400 p-2 rounded-xl">

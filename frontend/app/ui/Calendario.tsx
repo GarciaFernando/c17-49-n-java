@@ -24,7 +24,7 @@ export const Calendario: React.FC<Props> = () => {
   };
 
   return (
-    <div className="flex items-center justify-center mb-4 from-red-100 via-red-300 to-red-500 h-58">
+    <div className="flex items-center justify-center from-red-100 via-red-300 to-red-500 h-58">
       <div className="w-[550px] h-[230px] p-4 mx-auto overflow-hidden rounded-2xl shadow-2xl flex flex-col  bg-white">
         <div className="flex justify-between pb-4">
           <div

@@ -61,11 +61,11 @@ const initAccessibility = () => {
       color: '#fff',
       img: 'accessibility',
       useEmojis: false,
-      /* position: {
-        top: { size: 5, units: 'vh' },
-        left: { size: 2, units: '%' },
+      position: {
+        top: { size: 50, units: 'vh' },
+        left: { size: 96, units: '%' },
         type: 'fixed',
-      }, */
+      },
     } as IconOptions,
     modules: {
       increaseText: false,
