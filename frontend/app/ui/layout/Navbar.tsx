@@ -29,7 +29,7 @@ export const Navbar = () => {
   return (
     <div
       className={`flex-col transition-transform duration-0 transform ${
-        isNavbarVisible ? 'translate-x-0' : '-translate-x-60 w-1 fixed'
+        isNavbarVisible ? 'translate-x-0' : '-translate-x-44 w-1 fixed'
       }`}>
       <div
         className={`shadow-2xl rounded-xl w-[260px] h-[40px] bg-white  p-2 ml-6 -mt-60 mb-3 items-center justify-end hidden md:flex`}>
@@ -50,7 +50,7 @@ export const Navbar = () => {
       </div>
       <section
         className={`flex-col rounded-xl w-[229px] h-[530px] mr-6 overflow-hidden hidden relative p-4 ml-6 bg-white shadow-2xl box-content md:flex transition-transform duration-0 transform 
-            ${isNavbarVisible ? 'translate-x-0' : '-translate-x-20'}`}>
+            ${isNavbarVisible ? 'translate-x-0' : '-translate-x-44'}`}>
         <header>
           <Image src="/Medilatam.svg" alt="logo de la aplicación web" height={150} width={500} />
         </header>

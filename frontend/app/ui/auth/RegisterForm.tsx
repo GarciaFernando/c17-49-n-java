@@ -1,10 +1,18 @@
-import { AtSymbolIcon, KeyIcon, UserCircleIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, AtSymbolIcon, KeyIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 import { BotonPrincipal } from '../layout/BotonPrincipal';
 import { ImagenAvatar } from '../ImagenAvatar';
+import Link from 'next/link';
 
 export const RegisterForm = () => {
   return (
     <div>
+      <div className="justify-end ml-20 hidden md:flex w-full ">
+        <Link
+          className="bg-mlt-500 flex flex-col items-center rounded-2xl w-32 p-6 hover:scale-110 duration-300"
+          href="/">
+          <ArrowRightIcon className="absolute pointer-events-none h-[50px] w-[50px] -translate-y-1/2 text-white rotate-180" />
+        </Link>
+      </div>
       <div className="flex justify-center -mb-20">
         <ImagenAvatar imagen="/imageProfile/avatar.png" height={200} width={200} />
       </div>
