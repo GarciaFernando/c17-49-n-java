@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function misConsultas() {
-  return (
-   <> 
+  return <div>Mis consultas</div>;
+  /* <> 
     <section className="container px-4 mx-auto mt-5">
         <h1 className="font-bold text-lg text-center">Consultas pendientes</h1>
       <div className="flex flex-col">
@@ -521,8 +521,5 @@ export default function misConsultas() {
 </Link>
 </div>
 </section>
-</>
-    
-  );
+</> */
 }
-
