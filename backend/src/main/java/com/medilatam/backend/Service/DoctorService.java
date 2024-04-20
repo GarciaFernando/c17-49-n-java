@@ -7,10 +7,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author Franklynjsb
- */
 @Service
 public class DoctorService implements IDoctorService {
     

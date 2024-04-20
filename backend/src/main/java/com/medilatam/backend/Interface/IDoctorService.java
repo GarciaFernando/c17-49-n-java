@@ -4,16 +4,10 @@ import com.medilatam.backend.Entity.Doctor;
 import jakarta.transaction.Transactional;
 import java.util.List;
 
-/**
- *
- * @author Franklynjsb
- */
-
-
 @Transactional
 public interface IDoctorService {
     
-     //Exponer Lista de Doctores
+    //Exponer Lista de Doctores
     public List<Doctor> getDoctor();
     
     //Guarda un Objeto que sea Doctor

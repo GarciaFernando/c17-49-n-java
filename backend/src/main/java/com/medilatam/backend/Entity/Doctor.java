@@ -9,11 +9,6 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- *
- * @author Franklynjsb
- */
-
 @Entity
 @Getter @Setter
 public class Doctor {
@@ -41,11 +36,17 @@ public class Doctor {
     @NotNull
     private Integer costoConsulta;
 
+    private Float calificacion;
+
     
     //Constructors
     public Doctor() {
     }
-    
+
+    /*
+    No está siendo usado, pero igualmente lo dejamos
+    De todas formas, si al final vemos que no lo necesitamos podemos deprecar esta sección de código
+     */
     public Doctor(String nombre, String especialidad, String horarioAtencion, String localidad, Integer costoConsulta) {
         this.nombre = nombre;
         this.especialidad = especialidad;

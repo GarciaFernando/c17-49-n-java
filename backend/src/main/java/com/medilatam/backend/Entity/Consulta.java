@@ -50,5 +50,11 @@ public class Consulta {
     @Enumerated(EnumType.STRING)
     private TipoConsulta tipo;
 
+    @NotNull
+    private String email;
+
+    @NotNull
+    private Long celular;
+
     private Float calificacion;
 }

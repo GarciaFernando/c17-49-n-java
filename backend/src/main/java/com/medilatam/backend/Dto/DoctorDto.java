@@ -4,10 +4,6 @@ package com.medilatam.backend.Dto;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
-/**
- *
- * @author Franklynjsb
- */
 
 @Getter @Setter
 public class DoctorDto {
