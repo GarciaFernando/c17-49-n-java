@@ -28,7 +28,7 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`flex-col transition-transform duration-0 transform mx-6 ${
+      className={`flex-col transition-transform duration-0 transform ${
         isNavbarVisible ? 'translate-x-0' : '-translate-x-44 w-1 fixed'
       }`}>
       <header
@@ -50,7 +50,7 @@ export const Navbar = () => {
       </header>
       <section
         className={`flex-col rounded-xl w-[229px] h-[494px] mr-6 overflow-hidden hidden relative p-4  bg-white shadow-2xl box-content md:flex transition-transform duration-0 transform 
-            ${isNavbarVisible ? 'translate-x-0' : '-translate-x-7'}`}>
+            ${isNavbarVisible ? 'translate-x-0' : '-translate-x-2'}`}>
         <header className={`${isNavbarVisible ? 'hidden' : 'flex flex-row-reverse w-full'}`}>
           <ImagenAvatar imagen={'/imageProfile/avatar.png'} width={60} height={60} />
         </header>
