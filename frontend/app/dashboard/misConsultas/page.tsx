@@ -94,9 +94,7 @@ export default function misConsultas() {
                                <button
                                className="bg-mlt-600 hover:bg-mlt-800 text-white px-[10px] py-1 rounded-xl">
                                 Cancelar cita
-                               </button>
-                              
-                                
+                               </button>                              
                             </div>
                           </td>
                         </tr>
