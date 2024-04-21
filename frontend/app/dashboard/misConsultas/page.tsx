@@ -522,4 +522,5 @@ export default function misConsultas() {
 </div>
 </section>
 </> */
+  
 }
