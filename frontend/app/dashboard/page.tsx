@@ -95,7 +95,7 @@ export default function Dashboard() {
                     </span>
                   </div>
                 </div>
-                <button className="bg-[#0497b7] text-white px-[10px] py-1 rounded-xl">
+                <button className="bg-mlt-600 hover:bg-mlt-800 text-white px-[10px] py-1 rounded-xl">
                   Reservar cita
                 </button>
               </div>
