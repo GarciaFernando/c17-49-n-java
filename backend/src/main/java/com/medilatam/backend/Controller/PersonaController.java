@@ -11,24 +11,40 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/persona")
-
 public class PersonaController {
     @Autowired
     IPersonaService iPersonaService;
 
-    @GetMapping("personas")
+    //Listado de usuarios
+    @GetMapping("/showPersonas")
     public List<PersonaEntity> getPersonas(){
         return iPersonaService.listarPersonas();
     }
 
-    @GetMapping("persona/{id}")
+    //Devuelve los datos de un usuario seleccionado por su ID
+    @GetMapping("/showPersonas/{id}")
     public PersonaEntity getPersonaById(@PathVariable(name = "id") Long id){
         return iPersonaService.personaPorId(id);
     }
 
-    @PostMapping("persona/create")
+    //Crea un usuario
+    @PostMapping("/createPersona")
     public ResponseEntity<?> createPersona(@RequestBody PersonaEntity personaEntity){
         iPersonaService.guardarPersona(personaEntity);
         return ResponseEntity.status(HttpStatus.CREATED).body("El nuevo registro ha sido creado");
     }
+
+    //Edita un usuario según su ID
+    @PutMapping("/updatePersona/{id}")
+    public ResponseEntity<?> updatePersonaById(@PathVariable(name = "id") Long id, @RequestBody PersonaEntity personaDetails) {   
+        iPersonaService.actualizarPersonaPorId(id, personaDetails);
+        return ResponseEntity.status(HttpStatus.OK).body("El registro ha sido actualizado con éxito.");
+    }
+    //Borra un usuario según su ID
+    @DeleteMapping("/deletePersona/{id}")
+    public ResponseEntity<?> deletePersonaById(@PathVariable(name = "id") Long id) {   
+        iPersonaService.eliminarPersonaPorId(id);
+        return ResponseEntity.status(HttpStatus.OK).body("El registro ha sido eliminado con éxito.");
+    }
+
 }

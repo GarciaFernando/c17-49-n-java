@@ -1,6 +1,5 @@
 package com.medilatam.backend.Service;
 
-
 import com.medilatam.backend.Dto.ConsultaRequest;
 import com.medilatam.backend.Entity.Consulta;
 import com.medilatam.backend.Entity.EstadoConsulta;
@@ -88,7 +87,8 @@ public class ConsultaService implements IConsultaService {
     //Busca una consulta según un ID dado
     @Override
     public ResponseEntity<?> findConsulta(Long id) {
-        if (!consultaRepository.existsById(id)) { //Si no existe la consulta con el ID dado
+        //Si no existe la consulta con el ID dado
+        if (!consultaRepository.existsById(id)) {
             return ResponseEntity.status(400).body("La consulta no existe");
         }
         //Se busca una consulta por su ID para guardarla dentro de la variable y si no la encuentra expone un null
@@ -100,16 +100,18 @@ public class ConsultaService implements IConsultaService {
 
     @Override
     public ResponseEntity<?> getConsultasNoAtendidas() {
+         //Obtiene todas las consultas no atendidas
         List<Consulta> consultasNoAtendidas = consultaRepository.findAll()
                 .stream()
                 .filter(consulta->
-                        consulta.getEstado().equals(EstadoConsulta.NO_ATENDIDO)).toList(); //Obtiene todas las consultas no atendidas
+                        consulta.getEstado().equals(EstadoConsulta.NO_ATENDIDO)).toList();
         return ResponseEntity.status(200).body(consultasNoAtendidas);
     }
 
     @Override
     public ResponseEntity<?> editConsulta(Long id, String nuevaDescripcion, Integer nuevoEstadoDeConsulta, String nuevaFecha) {
-        if (!consultaRepository.existsById(id)) { //Si no existe la consulta con el ID dado
+        //Si no existe la consulta con el ID dado
+        if (!consultaRepository.existsById(id)) {
             return ResponseEntity.status(400).body("La consulta no existe");
         }
         Consulta consulta = consultaRepository.findById(id).get();
